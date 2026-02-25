@@ -761,6 +761,308 @@
       color: var(--gold-light);
     }
 
+    /* ── PERSONAL NOTE FROM KAY ──────────────────────── */
+    .note-section {
+      background: linear-gradient(135deg, var(--deep-blue), var(--mid-blue));
+      border-top: 1px solid rgba(201,168,76,0.15);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      padding: 4rem 1.5rem;
+    }
+
+    .note-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #faf6ef;
+      border: 2px solid #d4b483;
+      border-radius: 18px;
+      padding: 3rem 3.5rem;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.45), 0 0 0 6px rgba(201,168,76,0.08);
+      position: relative;
+    }
+
+    .note-card::before {
+      content: '';
+      position: absolute;
+      top: 12px; left: 12px; right: 12px; bottom: 12px;
+      border: 1px solid rgba(180,140,80,0.25);
+      border-radius: 12px;
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) {
+      .note-card { padding: 2rem 1.75rem; }
+    }
+
+    .note-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(180,140,80,0.3);
+      padding-bottom: 1rem;
+    }
+
+    .note-label {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #7a5c2e;
+      letter-spacing: 0.02em;
+    }
+
+    .note-quill {
+      font-size: 1.5rem;
+    }
+
+    .note-body {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 2;
+      color: #3a2e1e;
+    }
+
+    .note-body p {
+      margin-bottom: 1.1rem;
+    }
+
+    .note-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .note-sig {
+      margin-top: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #7a5c2e;
+      text-align: right;
+    }
+
+    /* ── YOUTUBE ──────────────────────────────────────── */
+    .youtube-section {
+      background: var(--navy);
+      padding: 5rem 1.5rem;
+    }
+
+    .youtube-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .youtube-grid { grid-template-columns: 1fr; }
+    }
+
+    .yt-card {
+      background: var(--deep-blue);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .yt-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 30px rgba(201,168,76,0.2), 0 20px 50px rgba(0,0,0,0.4);
+      transform: translateY(-4px);
+    }
+
+    .yt-embed-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+    }
+
+    .yt-embed-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .yt-label {
+      padding: 1rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--off-white);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .yt-new-badge {
+      background: linear-gradient(90deg, #e8c96e, #c9a84c);
+      color: var(--navy);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 50px;
+      padding: 0.2rem 0.6rem;
+      vertical-align: middle;
+    }
+
+    /* ── TIKTOK ──────────────────────────────────────── */
+    .tiktok-section {
+      background: linear-gradient(135deg, var(--deep-blue), var(--mid-blue));
+      padding: 5rem 1.5rem;
+      border-top: 1px solid rgba(201,168,76,0.1);
+    }
+
+    .tiktok-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .tiktok-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 580px) {
+      .tiktok-grid { grid-template-columns: 1fr; }
+    }
+
+    .tiktok-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .tiktok-card:hover {
+      border-color: rgba(201,168,76,0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    .tiktok-card .tiktok-embed {
+      margin: 0 !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      width: 100% !important;
+    }
+
+    /* ── ACTIVITIES GRID ──────────────────────────────── */
+    .activities-grid-section {
+      background: var(--navy);
+      padding: 5rem 1.5rem;
+    }
+
+    .act-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .act-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .act-grid { grid-template-columns: 1fr; }
+    }
+
+    .act-card {
+      background: linear-gradient(135deg, var(--deep-blue), #0d1f38);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      cursor: default;
+    }
+
+    .act-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,168,76,0.3);
+      border-color: rgba(201,168,76,0.3);
+    }
+
+    .act-icon {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .act-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+
+    .act-desc {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── VIBE SECTION ─────────────────────────────────── */
+    .vibe-section {
+      background: linear-gradient(135deg, #0d1b3e 0%, #0a1528 50%, #0f1e1a 100%);
+      border-top: 1px solid rgba(42,157,143,0.2);
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+
+    .vibe-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .vibe-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .vibe-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    .spotify-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, #1db954 0%, #17a347 40%, #1ec17e 100%);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 1rem 2.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      box-shadow: 0 8px 32px rgba(29,185,84,0.35), 0 2px 8px rgba(0,0,0,0.3);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    }
+
+    .spotify-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 16px 48px rgba(29,185,84,0.45), 0 4px 12px rgba(0,0,0,0.4);
+      filter: brightness(1.08);
+    }
+
+    .spotify-icon {
+      font-size: 1.3rem;
+    }
+
     /* ── ANIMATIONS ───────────────────────────────────── */
     .fade-in {
       opacity: 0;
@@ -826,6 +1128,25 @@
           <img src="https://storage.kempinski.com/cdn-cgi/image/w=1920,f=auto,fit=scale-down,g=auto/ki-cms-prod/images/8/9/1/0/150198-1-eng-GB/ddf076047977-73665693_4K.jpg" alt="Luxury beach resort" />
           <div class="story-image-label">📍 Soma Bay, Red Sea Coast</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PERSONAL NOTE FROM KAY ── -->
+  <section class="note-section">
+    <div class="container">
+      <div class="note-card fade-in">
+        <div class="note-header">
+          <span class="note-label">A note from Kay</span>
+          <span class="note-quill">✍️</span>
+        </div>
+        <div class="note-body">
+          <p>"Sade, I wanted to invite you properly.</p>
+          <p>This isn't just a holiday — it's 14 days of proper sunshine, Red Sea water, the best food, and zero excuses to do anything except enjoy ourselves. You deserve it.</p>
+          <p>Everything is sorted: flights, two 5-star hotels, private speed boat, the works. All you need to do is show up.</p>
+          <p>See you in Egypt. 🌊"</p>
+        </div>
+        <div class="note-sig">— Kay x</div>
       </div>
     </div>
   </section>
@@ -981,6 +1302,56 @@
     </div>
   </section>
 
+  <!-- ── YOUTUBE VIDEOS ── -->
+  <section class="youtube-section">
+    <div class="container">
+      <p class="section-label fade-in">See It For Yourself</p>
+      <h2 class="section-title fade-in">See It For Yourself 🎬</h2>
+      <div class="gold-line fade-in"></div>
+      <div class="youtube-grid fade-in">
+        <div class="yt-card">
+          <div class="yt-embed-wrap">
+            <iframe src="https://www.youtube.com/embed/uNkmAg26-bs" title="Kempinski Soma Bay — Full Hotel Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="yt-label">🏨 Kempinski Soma Bay — Full Hotel Tour</div>
+        </div>
+        <div class="yt-card">
+          <div class="yt-embed-wrap">
+            <iframe src="https://www.youtube.com/embed/sKm9THbPQYg" title="Rixos Magawish — 4K Luxury Experience" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="yt-label">🏨 Rixos Magawish — 4K Luxury Experience <span class="yt-new-badge">NEW</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TIKTOK ── -->
+  <section class="tiktok-section">
+    <div class="container">
+      <p class="section-label fade-in">Real Talk</p>
+      <h2 class="section-title fade-in">Everyone's Talking About It 📱</h2>
+      <div class="gold-line fade-in"></div>
+      <div class="tiktok-grid fade-in">
+        <div class="tiktok-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@sury_loquita/video/7209273392518778117" data-video-id="7209273392518778117">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="tiktok-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@innastronaswiata/video/7416374103923232032" data-video-id="7416374103923232032">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="tiktok-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hurghadaguide/video/7465749868863081750" data-video-id="7465749868863081750">
+            <section></section>
+          </blockquote>
+        </div>
+      </div>
+      <script async src="https://www.tiktok.com/embed.js"></script>
+    </div>
+  </section>
+
   <!-- ── ACTIVITY ── -->
   <section class="activity-section">
     <div class="container">
@@ -1004,6 +1375,47 @@
             <div class="activity-feature">🌊 Red Sea</div>
             <div class="activity-feature">🎣 Private Charter</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACTIVITIES GRID ── -->
+  <section class="activities-grid-section">
+    <div class="container">
+      <p class="section-label fade-in">What We're Doing</p>
+      <h2 class="section-title fade-in">What We're Doing 🏄</h2>
+      <div class="gold-line fade-in"></div>
+      <div class="act-grid">
+        <div class="act-card fade-in">
+          <div class="act-icon">🤿</div>
+          <div class="act-name">Scuba Diving</div>
+          <div class="act-desc">Red Sea coral reefs + shipwrecks — world-class diving right from the beach</div>
+        </div>
+        <div class="act-card fade-in">
+          <div class="act-icon">🏄</div>
+          <div class="act-name">Water Sports</div>
+          <div class="act-desc">Jet ski, windsurfing, parasailing — the full package at both resorts</div>
+        </div>
+        <div class="act-card fade-in">
+          <div class="act-icon">🌅</div>
+          <div class="act-name">Sunset Cruise</div>
+          <div class="act-desc">Private boat, Red Sea sunset, cold drinks — the most beautiful hour of the day</div>
+        </div>
+        <div class="act-card fade-in">
+          <div class="act-icon">💆</div>
+          <div class="act-name">Anjana Spa (Rixos)</div>
+          <div class="act-desc">World-class spa treatments. You've earned it.</div>
+        </div>
+        <div class="act-card fade-in">
+          <div class="act-icon">🐎</div>
+          <div class="act-name">Horse Riding on the Beach</div>
+          <div class="act-desc">Desert + beach + sunset. Only at Rixos.</div>
+        </div>
+        <div class="act-card fade-in">
+          <div class="act-icon">🍽️</div>
+          <div class="act-name">6 A-La-Carte Restaurants</div>
+          <div class="act-desc">All-inclusive means zero compromise on food. 6 restaurants to work through.</div>
         </div>
       </div>
     </div>
@@ -1055,6 +1467,20 @@
           <div class="pack-item">💳 Travel card (no FX fees)</div>
           <div class="pack-item">🎶 Spotify playlist</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VIBE SECTION ── -->
+  <section class="vibe-section">
+    <div class="container">
+      <div class="vibe-inner fade-in">
+        <div class="vibe-title">Start the Vibe Early 🎵</div>
+        <p class="vibe-sub">Get yourself in the mood before we even land. We're talking Red Sea breezes, cold drinks, and proper summer energy — right now, from your sofa.</p>
+        <a href="https://open.spotify.com/playlist/37i9dQZF1DX8GFjD9rObCu" target="_blank" rel="noopener" class="spotify-btn">
+          <span class="spotify-icon">🎧</span>
+          Get in the mood — Red Sea playlist on Spotify →
+        </a>
       </div>
     </div>
   </section>
