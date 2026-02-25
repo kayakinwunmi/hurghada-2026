@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kay & Sade — Hurghada 2026 🌊</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy:      #0a0f1e;
+      --deep-blue: #0d1b3e;
+      --mid-blue:  #112250;
+      --ocean:     #1a3a6b;
+      --gold:      #c9a84c;
+      --gold-light:#e8c96e;
+      --gold-pale: #f5e4b2;
+      --white:     #ffffff;
+      --off-white: #f0eee8;
+      --text-muted:#a8b4c8;
+      --teal:      #2a9d8f;
+      --teal-light:#38c9b7;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--navy);
+      color: var(--off-white);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ─────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1800&q=80');
+      background-size: cover;
+      background-position: center 40%;
+      transform: scale(1.05);
+      animation: heroZoom 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroZoom {
+      from { transform: scale(1.05); }
+      to   { transform: scale(1.12); }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10,15,30,0.55) 0%,
+        rgba(10,15,30,0.3)  40%,
+        rgba(10,15,30,0.7)  80%,
+        rgba(10,15,30,1)    100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 1.5rem;
+      max-width: 860px;
+    }
+
+    .hero-flag {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-8px); }
+    }
+
+    .hero-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--white);
+      text-shadow: 0 4px 24px rgba(0,0,0,0.6);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.05em;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(201,168,76,0.4);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      padding: 0.45rem 1.2rem;
+      font-size: 0.85rem;
+      color: var(--gold-pale);
+      letter-spacing: 0.05em;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      animation: fadeInUp 1s ease 1s both;
+    }
+
+    .scroll-arrow {
+      width: 24px;
+      height: 24px;
+      border-right: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+      transform: rotate(45deg);
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: rotate(45deg) translateY(0); }
+      50%       { transform: rotate(45deg) translateY(6px); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity:0; transform:translateX(-50%) translateY(20px); }
+      to   { opacity:1; transform:translateX(-50%) translateY(0); }
+    }
+
+    /* ── SECTIONS ─────────────────────────────────────── */
+    section {
+      padding: 5rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+
+    .gold-line {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      border-radius: 2px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── STORY ────────────────────────────────────────── */
+    .story-section {
+      background: linear-gradient(135deg, var(--deep-blue) 0%, var(--mid-blue) 100%);
+      border-top: 1px solid rgba(201,168,76,0.15);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .story-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    .story-text p {
+      font-size: 1.15rem;
+      line-height: 1.85;
+      color: var(--off-white);
+      margin-bottom: 1.25rem;
+    }
+
+    .story-text p:last-child { margin-bottom: 0; }
+
+    .story-image {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    }
+
+    .story-image img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .story-image:hover img { transform: scale(1.04); }
+
+    .story-image-label {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background: rgba(10,15,30,0.8);
+      border: 1px solid rgba(201,168,76,0.3);
+      backdrop-filter: blur(8px);
+      border-radius: 8px;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.78rem;
+      color: var(--gold-light);
+      letter-spacing: 0.1em;
+    }
+
+    /* ── FLIGHTS ──────────────────────────────────────── */
+    .flights-section {
+      background: var(--navy);
+    }
+
+    .flight-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .flight-cards { grid-template-columns: 1fr; }
+    }
+
+    .flight-card {
+      background: linear-gradient(135deg, var(--deep-blue), var(--mid-blue));
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 16px;
+      padding: 1.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flight-card::before {
+      content: '✈';
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 4rem;
+      opacity: 0.06;
+      color: var(--gold);
+    }
+
+    .flight-direction {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .flight-route {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .flight-airport {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .flight-arrow {
+      color: var(--gold);
+      font-size: 1.5rem;
+      flex: 1;
+      text-align: center;
+    }
+
+    .flight-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .flight-detail {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .flight-detail span {
+      color: var(--off-white);
+      font-weight: 500;
+    }
+
+    /* ── ITINERARY ────────────────────────────────────── */
+    .itinerary-section {
+      background: linear-gradient(180deg, var(--deep-blue) 0%, var(--navy) 100%);
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 2.5rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 2rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--gold) 0%, rgba(201,168,76,0.1) 100%);
+    }
+
+    @media (max-width: 768px) {
+      .timeline::before { left: 1.25rem; }
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      padding-left: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item { gap: 1.25rem; }
+    }
+
+    .timeline-dot {
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      box-shadow: 0 0 20px rgba(201,168,76,0.3);
+      margin-left: 1rem;
+      flex: 0 0 2rem;
+    }
+
+    .timeline-content {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 1.5rem;
+      flex: 1;
+      transition: border-color 0.3s;
+    }
+
+    .timeline-content:hover {
+      border-color: rgba(201,168,76,0.3);
+    }
+
+    .timeline-date {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .timeline-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── HOTELS ───────────────────────────────────────── */
+    .hotels-section {
+      background: var(--navy);
+    }
+
+    .hotel-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hotel-cards { grid-template-columns: 1fr; }
+    }
+
+    .hotel-card {
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--deep-blue);
+      border: 1px solid rgba(201,168,76,0.15);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    }
+
+    .hotel-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hotel-body {
+      padding: 1.75rem;
+    }
+
+    .hotel-stars {
+      color: var(--gold);
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.1em;
+    }
+
+    .hotel-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+
+    .hotel-location {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hotel-dates {
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      color: var(--gold-light);
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+
+    .hotel-highlights {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .hotel-highlights li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hotel-highlights li::before {
+      content: '✦';
+      color: var(--gold);
+      font-size: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    /* ── ACTIVITY ─────────────────────────────────────── */
+    .activity-section {
+      background: linear-gradient(135deg, var(--deep-blue), var(--mid-blue));
+      border-top: 1px solid rgba(42,157,143,0.2);
+      border-bottom: 1px solid rgba(42,157,143,0.2);
+    }
+
+    .activity-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .activity-card { grid-template-columns: 1fr; }
+    }
+
+    .activity-image {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .activity-body {
+      background: linear-gradient(135deg, #0d2a40, #0a1f30);
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .activity-tag {
+      display: inline-block;
+      background: rgba(42,157,143,0.2);
+      border: 1px solid rgba(42,157,143,0.4);
+      border-radius: 50px;
+      padding: 0.3rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 1.25rem;
+      width: fit-content;
+    }
+
+    .activity-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .activity-date {
+      font-size: 0.88rem;
+      color: var(--teal-light);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .activity-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .activity-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .activity-feature {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.82rem;
+      color: var(--off-white);
+    }
+
+    /* ── WEATHER ──────────────────────────────────────── */
+    .weather-section {
+      background: var(--navy);
+    }
+
+    .weather-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .weather-card {
+      background: linear-gradient(135deg, var(--deep-blue), var(--mid-blue));
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: border-color 0.3s;
+    }
+
+    .weather-card:hover {
+      border-color: rgba(201,168,76,0.3);
+    }
+
+    .weather-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .weather-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--gold-light);
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .weather-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .pack-section {
+      margin-top: 1rem;
+    }
+
+    .pack-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .pack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .pack-item {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      font-size: 0.88rem;
+      color: var(--off-white);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    /* ── FOOTER ───────────────────────────────────────── */
+    footer {
+      background: linear-gradient(135deg, var(--deep-blue), var(--navy));
+      border-top: 1px solid rgba(201,168,76,0.2);
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+    }
+
+    .footer-emoji {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .footer-divider {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 2rem auto;
+    }
+
+    .footer-bottom {
+      font-size: 0.78rem;
+      color: rgba(168,180,200,0.4);
+      letter-spacing: 0.1em;
+    }
+
+    /* ── SPLASH COUNTDOWN ─────────────────────────────── */
+    .countdown-bar {
+      background: linear-gradient(90deg, rgba(201,168,76,0.12), rgba(201,168,76,0.05));
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--gold-pale);
+      letter-spacing: 0.05em;
+    }
+
+    .countdown-bar strong {
+      color: var(--gold-light);
+    }
+
+    /* ── ANIMATIONS ───────────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Countdown Bar -->
+  <div class="countdown-bar" id="countdownBar">
+    ✈️ Loading departure countdown…
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-flag">🇪🇬</div>
+      <p class="hero-eyebrow">28 March — 11 April 2026</p>
+      <h1 class="hero-title">Kay &amp; Sade's<br><em>Hurghada</em> Escape</h1>
+      <p class="hero-subtitle">Red Sea · Soma Bay · Egypt · 15 Days of Pure Magic</p>
+      <div class="hero-badges">
+        <span class="badge">🏨 Kempinski Soma Bay</span>
+        <span class="badge">🏨 Rixos Premium</span>
+        <span class="badge">⛵ Private Speedboat</span>
+        <span class="badge">☀️ 30°C Every Day</span>
+        <span class="badge">🌊 Red Sea</span>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ── STORY ── -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-text fade-in">
+          <p class="section-label">The Story</p>
+          <h2 class="section-title">This one's for us, Sade.</h2>
+          <div class="gold-line"></div>
+          <p>
+            Fourteen nights. Two world-class hotels. One private speedboat. And nothing but sunshine, warm Red Sea water, and good vibes — that's what this trip is all about.
+          </p>
+          <p>
+            We're heading to Hurghada's stunning Soma Bay peninsula — one of Egypt's most exclusive stretches of coastline — starting at the legendary Kempinski before moving into the ultra-all-inclusive paradise of Rixos Magawish.
+          </p>
+          <p>
+            Pack light, charge your camera, and get ready for the trip we'll be talking about for years. 🌴
+          </p>
+        </div>
+        <div class="story-image fade-in">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80" alt="Luxury beach resort" />
+          <div class="story-image-label">📍 Soma Bay, Red Sea Coast</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FLIGHTS ── -->
+  <section class="flights-section">
+    <div class="container">
+      <p class="section-label fade-in">Getting There</p>
+      <h2 class="section-title fade-in">Our Flights ✈️</h2>
+      <div class="gold-line fade-in"></div>
+      <div class="flight-cards">
+        <div class="flight-card fade-in">
+          <div class="flight-direction">🟠 Outbound · easyJet</div>
+          <div class="flight-route">
+            <div class="flight-airport">LTN</div>
+            <div class="flight-arrow">→</div>
+            <div class="flight-airport">HRG</div>
+          </div>
+          <div class="flight-details">
+            <div class="flight-detail">📅 Date: <span>Saturday, 28 March 2026</span></div>
+            <div class="flight-detail">🕐 Departure: <span>13:10 from Luton</span></div>
+            <div class="flight-detail">📍 Route: <span>London Luton → Hurghada</span></div>
+          </div>
+        </div>
+        <div class="flight-card fade-in">
+          <div class="flight-direction">🟠 Return · easyJet</div>
+          <div class="flight-route">
+            <div class="flight-airport">HRG</div>
+            <div class="flight-arrow">→</div>
+            <div class="flight-airport">LTN</div>
+          </div>
+          <div class="flight-details">
+            <div class="flight-detail">📅 Date: <span>Friday, 11 April 2026</span></div>
+            <div class="flight-detail">🕐 Departure: <span>19:45 from Hurghada</span></div>
+            <div class="flight-detail">📍 Route: <span>Hurghada → London Luton</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ITINERARY ── -->
+  <section class="itinerary-section">
+    <div class="container">
+      <p class="section-label fade-in">What We're Doing</p>
+      <h2 class="section-title fade-in">The Full Itinerary 🗓️</h2>
+      <div class="gold-line fade-in"></div>
+      <div class="timeline">
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot">✈️</div>
+          <div class="timeline-content">
+            <div class="timeline-date">Saturday · 28 March</div>
+            <div class="timeline-title">Departure Day — London → Hurghada</div>
+            <div class="timeline-desc">Meet at London Luton for our 13:10 easyJet flight. Land in Hurghada and transfer to the legendary Kempinski Hotel Soma Bay. First evening: sundowners on the terrace, dinner overlooking the Red Sea. Welcome to paradise. 🥂</div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot">⛵</div>
+          <div class="timeline-content">
+            <div class="timeline-date">Sunday · 29 March — 1:00 PM</div>
+            <div class="timeline-title">🌟 HIGHLIGHT: Private Speed Boat Adventure</div>
+            <div class="timeline-desc">Our private speedboat departs at 1:00 PM. We're going full Red Sea explorer mode — snorkelling the coral reefs, watching for dolphins, hopping between islands. This is the one. Pack your swimwear and your sense of adventure. 🐬🤿</div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot">🏖️</div>
+          <div class="timeline-content">
+            <div class="timeline-date">30 March – 4 April</div>
+            <div class="timeline-title">Kempinski Lazy Days</div>
+            <div class="timeline-desc">Five glorious days to do absolutely nothing — or everything. Morning beach swims, spa treatments, watersports, sunset yoga, and feasting at the Kempinski's acclaimed restaurants. This is 5-star living at its finest. ☀️</div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot">🏨</div>
+          <div class="timeline-content">
+            <div class="timeline-date">Saturday · 5 April</div>
+            <div class="timeline-title">Hotel Switch — Rixos Premium Magawish</div>
+            <div class="timeline-desc">Check out of Kempinski and check into Rixos Premium Magawish — one of Egypt's most celebrated ultra-all-inclusive resorts. Everything included: food, drinks, entertainment, water park, watersports. It's a full-on holiday destination in itself. 🎉</div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot">🌊</div>
+          <div class="timeline-content">
+            <div class="timeline-date">5 April – 10 April</div>
+            <div class="timeline-title">Rixos Premium — The Final Chapter</div>
+            <div class="timeline-desc">Six nights of ultra-all-inclusive bliss. Live shows, beach parties, multiple pools, beach volleyball, aqua aerobics, sunset cocktails — you name it. Rixos is an experience, not just a hotel. Soak it all up. 🌅</div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot">✈️</div>
+          <div class="timeline-content">
+            <div class="timeline-date">Friday · 11 April</div>
+            <div class="timeline-title">Farewell Hurghada — Flight Home at 19:45</div>
+            <div class="timeline-desc">One last morning on Egyptian soil. Breakfast with a view, final beach walk, then transfer to Hurghada airport for our 19:45 easyJet home. We'll land back in London with tans, stories, and memories for life. 🏡</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOTELS ── -->
+  <section class="hotels-section">
+    <div class="container">
+      <p class="section-label fade-in">Where We're Staying</p>
+      <h2 class="section-title fade-in">Our Hotels 🏨</h2>
+      <div class="gold-line fade-in"></div>
+      <div class="hotel-cards">
+
+        <div class="hotel-card fade-in">
+          <img class="hotel-image" src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=900&q=80" alt="Kempinski Hotel Soma Bay" />
+          <div class="hotel-body">
+            <div class="hotel-stars">★★★★★</div>
+            <div class="hotel-name">Kempinski Hotel Soma Bay</div>
+            <div class="hotel-location">📍 Soma Bay Peninsula, Hurghada, Egypt</div>
+            <div class="hotel-dates">📅 28 March → 5 April · 8 nights</div>
+            <ul class="hotel-highlights">
+              <li>Iconic 5-star luxury on private Soma Bay peninsula</li>
+              <li>Pristine private beach & world-class watersports</li>
+              <li>Multiple signature restaurants & beach bars</li>
+              <li>The Soma Bay Thalasso & Spa — Red Sea thermal treatments</li>
+              <li>Parasailing, jet skiing, diving & snorkelling</li>
+              <li>Stunning sunset views across the Red Sea</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hotel-card fade-in">
+          <img class="hotel-image" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=900&q=80" alt="Rixos Premium Magawish" />
+          <div class="hotel-body">
+            <div class="hotel-stars">★★★★★</div>
+            <div class="hotel-name">Rixos Premium Magawish</div>
+            <div class="hotel-location">📍 Magawish Island, Hurghada, Egypt</div>
+            <div class="hotel-dates">📅 5 April → 11 April · 6 nights</div>
+            <ul class="hotel-highlights">
+              <li>Ultra-all-inclusive — food, drinks & entertainment all in</li>
+              <li>Aqua park with slides, lazy river & wave pool</li>
+              <li>Nightly live shows, beach parties & DJ sets</li>
+              <li>Dedicated beach with complimentary watersports</li>
+              <li>Rixy Kids Club (for the inner child in all of us 😄)</li>
+              <li>Spa, fitness centre & multiple pool areas</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACTIVITY ── -->
+  <section class="activity-section">
+    <div class="container">
+      <p class="section-label fade-in">Day 2 Highlight</p>
+      <h2 class="section-title fade-in">The Adventure 🐬</h2>
+      <div class="gold-line fade-in"></div>
+      <div class="activity-card fade-in">
+        <img class="activity-image" src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=900&q=80" alt="Speed boat snorkelling Red Sea" />
+        <div class="activity-body">
+          <div class="activity-tag">⛵ Private Charter</div>
+          <div class="activity-title">Private Speed Boat Trip</div>
+          <div class="activity-date">📅 Sunday, 29 March 2026 · Departs 1:00 PM</div>
+          <div class="activity-desc">
+            Just the two of us on a private speedboat — no tour groups, no noise, just open water and the legendary Red Sea. We'll cruise to the coral reefs, snorkel with the fish, watch for dolphins, and hop between uninhabited islands. The stuff of travel dreams.
+          </div>
+          <div class="activity-features">
+            <div class="activity-feature">🤿 Snorkelling</div>
+            <div class="activity-feature">🐬 Dolphin Watching</div>
+            <div class="activity-feature">🏝️ Island Hopping</div>
+            <div class="activity-feature">🐠 Coral Reefs</div>
+            <div class="activity-feature">🌊 Red Sea</div>
+            <div class="activity-feature">🎣 Private Charter</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WEATHER ── -->
+  <section class="weather-section">
+    <div class="container">
+      <p class="section-label fade-in">What to Expect</p>
+      <h2 class="section-title fade-in">Weather &amp; Vibes ☀️</h2>
+      <div class="gold-line fade-in"></div>
+
+      <div class="weather-grid">
+        <div class="weather-card fade-in">
+          <div class="weather-icon">🌡️</div>
+          <div class="weather-value">28–32°C</div>
+          <div class="weather-label">Daily Air Temperature</div>
+        </div>
+        <div class="weather-card fade-in">
+          <div class="weather-icon">☀️</div>
+          <div class="weather-value">0mm</div>
+          <div class="weather-label">Average Rainfall</div>
+        </div>
+        <div class="weather-card fade-in">
+          <div class="weather-icon">🌊</div>
+          <div class="weather-value">24°C</div>
+          <div class="weather-label">Red Sea Water Temp</div>
+        </div>
+        <div class="weather-card fade-in">
+          <div class="weather-icon">💨</div>
+          <div class="weather-value">Light</div>
+          <div class="weather-label">Breeze · Perfect for sailing</div>
+        </div>
+      </div>
+
+      <div class="pack-section fade-in">
+        <h3 class="pack-title">What to Pack 🎒</h3>
+        <div class="pack-grid">
+          <div class="pack-item">👙 Swimwear (lots!)</div>
+          <div class="pack-item">🕶️ Sunglasses</div>
+          <div class="pack-item">🧴 SPF 50+ sunscreen</div>
+          <div class="pack-item">🩴 Flip flops</div>
+          <div class="pack-item">👗 Light summer dresses</div>
+          <div class="pack-item">🤿 Snorkel mask (optional)</div>
+          <div class="pack-item">📷 Camera / GoPro</div>
+          <div class="pack-item">💊 Seasickness tablets</div>
+          <div class="pack-item">📱 Travel adapter</div>
+          <div class="pack-item">🌙 Light evening jacket</div>
+          <div class="pack-item">💳 Travel card (no FX fees)</div>
+          <div class="pack-item">🎶 Spotify playlist</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-emoji">🌅</div>
+    <h2 class="footer-title">See you in Hurghada, Sade!</h2>
+    <p class="footer-sub">
+      15 days of sunshine, warm water, world-class hotels, and unforgettable memories. This is going to be special. Get excited — it's almost time. ✨
+    </p>
+    <div class="footer-divider"></div>
+    <p class="footer-bottom">
+      Kay &amp; Sade · Hurghada 2026 · London Luton → Red Sea 🇪🇬
+    </p>
+  </footer>
+
+  <script>
+    // ── Countdown Bar ──────────────────────────────────────
+    function updateCountdown() {
+      const departure = new Date('2026-03-28T13:10:00Z');
+      const now = new Date();
+      const diff = departure - now;
+
+      const bar = document.getElementById('countdownBar');
+      if (!bar) return;
+
+      if (diff <= 0) {
+        bar.textContent = '🌊 We\'re in Hurghada! Living our best lives right now 🌴';
+        return;
+      }
+
+      const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs  = Math.floor((diff % (1000 * 60)) / 1000);
+
+      bar.innerHTML = `✈️ <strong>${days}d ${hours}h ${mins}m ${secs}s</strong> until we fly — London Luton, 28 March, 13:10 · Get excited! 🇪🇬`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ── Scroll Animations ──────────────────────────────────
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Stagger siblings
+          const siblings = entry.target.parentElement.querySelectorAll('.fade-in');
+          let delay = 0;
+          siblings.forEach(sib => {
+            if (!sib.classList.contains('visible')) {
+              sib.style.transitionDelay = `${delay}ms`;
+              delay += 100;
+            }
+          });
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
