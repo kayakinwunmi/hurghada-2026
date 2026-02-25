@@ -952,6 +952,35 @@
       width: 100% !important;
     }
 
+    .tiktok-row-2 {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .tiktok-row-2 .tiktok-card {
+      flex: 0 1 calc(33.333% - 0.75rem);
+      max-width: calc(33.333% - 0.75rem);
+    }
+
+    @media (max-width: 900px) {
+      .tiktok-row-2 .tiktok-card {
+        flex: 0 1 calc(50% - 0.75rem);
+        max-width: calc(50% - 0.75rem);
+      }
+    }
+
+    @media (max-width: 580px) {
+      .tiktok-row-2 {
+        flex-direction: column;
+      }
+      .tiktok-row-2 .tiktok-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
     /* ── ACTIVITIES GRID ──────────────────────────────── */
     .activities-grid-section {
       background: var(--navy);
@@ -1142,7 +1171,10 @@
         </div>
         <div class="note-body">
           <p>"Sade, I wanted to invite you properly.</p>
-          <p>This isn't just a holiday — it's 14 days of proper sunshine, Red Sea water, the best food, and zero excuses to do anything except enjoy ourselves. You deserve it.</p>
+          <p>First of all, congratulations on your new role. I am so proud of you! 🫶🏾</p>
+          <p>Secondly, welcome to your soft girl era. An era where work is optional, not mandatory 😝</p>
+          <p>This isn't just a holiday — it's 14 days of proper sunshine, Red Sea water, the best food, and zero excuses to do anything except enjoy ourselves.</p>
+          <p>This is the break you need before you go deep into your new role. You deserve it.</p>
           <p>Everything is sorted: flights, two 5-star hotels, private speed boat, the works. All you need to do is show up.</p>
           <p>See you in Egypt. 🌊"</p>
         </div>
@@ -1311,9 +1343,9 @@
       <div class="youtube-grid fade-in">
         <div class="yt-card">
           <div class="yt-embed-wrap">
-            <iframe src="https://www.youtube.com/embed/uNkmAg26-bs" title="Kempinski Soma Bay — Full Hotel Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/hl9hHFs2hV0" title="My Unforgettable Holiday at Kempinski Soma Bay 🏨" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="yt-label">🏨 Kempinski Soma Bay — Full Hotel Tour</div>
+          <div class="yt-label">🏨 My Unforgettable Holiday at Kempinski Soma Bay 🏨</div>
         </div>
         <div class="yt-card">
           <div class="yt-embed-wrap">
@@ -1331,19 +1363,33 @@
       <p class="section-label fade-in">Real Talk</p>
       <h2 class="section-title fade-in">Everyone's Talking About It 📱</h2>
       <div class="gold-line fade-in"></div>
+      <!-- Row 1: 3 TikToks -->
       <div class="tiktok-grid fade-in">
         <div class="tiktok-card">
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@sury_loquita/video/7209273392518778117" data-video-id="7209273392518778117">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@simsworld93/video/7610491821239586070" data-video-id="7610491821239586070">
             <section></section>
           </blockquote>
         </div>
         <div class="tiktok-card">
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@innastronaswiata/video/7416374103923232032" data-video-id="7416374103923232032">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hurghadadream/video/7599254424527129878" data-video-id="7599254424527129878">
             <section></section>
           </blockquote>
         </div>
         <div class="tiktok-card">
-          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hurghadaguide/video/7465749868863081750" data-video-id="7465749868863081750">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@fit_nomads/video/7572111984016018695" data-video-id="7572111984016018695">
+            <section></section>
+          </blockquote>
+        </div>
+      </div>
+      <!-- Row 2: 2 TikToks centred -->
+      <div class="tiktok-row-2 fade-in">
+        <div class="tiktok-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@star_divers_red_sea/video/7583662022408129814" data-video-id="7583662022408129814">
+            <section></section>
+          </blockquote>
+        </div>
+        <div class="tiktok-card">
+          <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@travelwithge/video/7486551105158057238" data-video-id="7486551105158057238">
             <section></section>
           </blockquote>
         </div>
